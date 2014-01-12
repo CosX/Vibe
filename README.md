@@ -1,11 +1,11 @@
-# Pebble
+# Vibe
 
-####A theme for [Ghost](http://github.com/tryghost/ghost/) v0.3.3.
+####A theme for [Ghost](http://github.com/tryghost/ghost/) using masonry and bootstrap 3
 
-####[Live Demo](http://blog.jonambas.com)
+####[Live Demo](http://vibekelarsen.net)
 
-_This is built off of Ghost's Casper theme. As a result, the Sass is a little disorganized. I'm working on cleaning it up._
+_This is built off of Ghost's Casper theme.
 
 ##License
 
-Pebble is licensed under the [MIT](http://opensource.org/licenses/mit-license.php) license.
+Vibe is licensed under the [MIT](http://opensource.org/licenses/mit-license.php) license.
