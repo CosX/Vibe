@@ -1,0 +1,29 @@
+{{!< default}}
+
+
+{{! The main content area on the homepage }}
+<div id="container" class="content js-masonry" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
+
+    {{! Each post will be output using this markup }}
+    {{#foreach posts}}
+<div class="item">
+    <article class="{{post_class}}">
+        <div class="post-image">
+            <a href="{{url}}">
+                {{content words="0"}}
+            </a>
+        </div>
+        <header class="post-header index inner">
+            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        </header>
+        <section class="post-excerpt inner">
+            <p>{{excerpt characters="20"}}&hellip;</p>
+        </section>
+        
+    </article>
+</div>
+    {{/foreach}}
+
+    {{pagination}}
+
+</div>
