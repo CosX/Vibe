@@ -31,14 +31,14 @@
 			{{#if @blog.logo}}
 				<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" style=" height: 45px; margin-top: 5px;" /></a>
 			{{else}}
-				<a class="navbar-brand" href="#">{{@blog.title}}</a>
+				<a class="navbar-brand" href="{{@blog.url}}">{{@blog.title}}</a>
 			{{/if}}
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/">Hjem</a></li>
             <li><a href="/#blog">Galleri</a></li>
-            <li><a href="/#about">Om Vibeke Larsen</a></li>
+            <li><a href="/about">Om Vibeke Larsen</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

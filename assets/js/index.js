@@ -3,7 +3,7 @@ $(document).ready(function(){
     // initialize
     setTimeout(function(){
         $container.masonry({
-      columnWidth: 200,
+      columnWidth: 100,
       itemSelector: '.item'
     });
         }, 10);
