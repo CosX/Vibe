@@ -1,29 +1,61 @@
 {{!< default}}
 
-
-{{! The main content area on the homepage }}
-<div id="container" class="content js-masonry" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
-
-    {{! Each post will be output using this markup }}
-    {{#foreach posts}}
-<div class="item">
-    <article class="{{post_class}}">
-        <div class="post-image">
-            <a href="{{url}}">
-                {{content words="0"}}
-            </a>
+{{! The big featured header on the homepage, with the site logo and description }}
+<header class="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="vertical">
+        <div class="site-head-content inner">
+            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+            <h1 class="blog-title">{{@blog.title}}</h1><br/>
+            <h2 class="blog-description">{{@blog.description}}</h2>
         </div>
-        <header class="post-header index inner">
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-        </header>
-        <section class="post-excerpt inner">
-            <p>{{excerpt characters="20"}}&hellip;</p>
-        </section>
-        
-    </article>
+    </div>
+</header>
+<div class="row ad-content">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-4">
+			<h1>Hei.<small>Heisann!</small></h1>
+			<p>The big featured header on the homepage, with the site logo and description</p>
+		</div>
+		<div class="col-md-4">
+			<h1>Hei.<small>Heisann!</small></h1>
+			<p>The big featured header on the homepage, with the site logo and description</p>
+		</div>
+		<div class="col-md-4">
+			<h1>Hei.<small>Heisann!</small></h1>
+			<p>The big featured header on the homepage, with the site logo and description</p>
+		</div>
+	</div>
 </div>
-    {{/foreach}}
+{{! The main content area on the homepage }}
 
-    {{pagination}}
+<div class="blog">
+<h1 style="text-align:center; color:white;">Galleri</h1>
+	<div id="container" class="content js-masonry" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
+		{{! Each post will be output using this markup }}
+		{{#foreach posts}}
+	<div class="item">
+		<article class="{{post_class}}">
+			<div class="post-image">
+				<a href="{{url}}">
+					{{content words="0"}}
+				</a>
+			</div>
+			<header class="post-header index post-inner">
+				<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+			</header>
+			<section class="post-excerpt post-inner">
+				<p>{{excerpt characters="70"}}&hellip;</p>
+			</section>
+		</article>
+	</div>
+		{{/foreach}}
 
+	</div>
 </div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.carousel').carousel({
+      interval: 2000
+    });
+  });
+</script>

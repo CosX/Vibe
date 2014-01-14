@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  margin-top: 80px;
+  margin-top: 54px;
   font-family: "Muli", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -45,7 +45,7 @@ h1, h2, h3,
 h4, h5, h6 {
   text-rendering: optimizeLegibility;
   font-family: "monr", sans-serif;
-  color: #404040;
+  color: #FFFFFF;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -77,7 +77,7 @@ h6 {
 }
 
 a {
-  color: #4a4a4a;
+  color: #EEE;
   -webkit-transition: ease 0.3s;
   -moz-transition: ease 0.3s;
   -o-transition: ease 0.3s;
@@ -86,19 +86,19 @@ a {
 
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
-  color: #CECECE;
+  color: #eee;
 }
 
 b, strong {
   font-family: "monb", sans-serif;
 }
 
-.item { width: 30%; }
+.blog .item { width: 30%; }
 
 .post-header.index .post-title {
   font-family: "monr", sans-serif;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight:. 400;
   text-transform: uppercase;
   letter-spacing: 3px;
   line-height: 1.8rem;
@@ -117,25 +117,25 @@ b, strong {
 }
 
 .blog-title, #blog-logo, .post-template .post-header a {
-  font-family: "monb", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #404040;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 2rem;
-  text-indent: 0;
-  text-decoration: none;
+font-family: "monb", sans-serif;
+font-size: 2rem;
+font-weight: 700;
+color: #FAFAFA;
+text-transform: uppercase;
+letter-spacing: 3px;
+line-height: 2rem;
+text-indent: 0;
+text-decoration: none;
 }
 
 .blog-description {
-  font-family: "monr", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 2rem;
-  letter-spacing: 0;
-  color: #999;
-  text-transform: uppercase;
+font-family: "monr", sans-serif;
+font-size: 1.4rem;
+font-weight: 400;
+line-height: 2rem;
+letter-spacing: 0;
+color: #EEE;
+text-transform: uppercase;
 }
 
 code, tt, pre {
@@ -188,11 +188,12 @@ html {
 body {
   height: 100%;
 max-height: 100%;
-background-color: #19232E;
+background-color: #FFFFFF;
 }
 
 #container {
-    margin-left: 45px;
+margin-top: 30px;
+padding: 30px 15px;
 }
 
 ::-moz-selection {
@@ -219,7 +220,12 @@ pre, blockquote {
 }
 
 .inner {
-  width: 100%;
+width: 100%;
+padding: 13% 0;
+text-align:center;
+}
+.post-inner {
+    width: 100%;
 }
 @media (min-width: 1200px) {
     .container {
@@ -282,10 +288,13 @@ margin-top: -10px;
 #site-head {
   width: 100%;
 }
+.site-head {
+    background-position: center;
+    background-size: 100%;
+}
 
 .blog-title, .blog-description {
   display: inline-block;
-  margin: 5.2rem 0;
 }
 
 .blog-description {
@@ -319,9 +328,9 @@ margin-top: -10px;
 }
 
 .post-content img {
-  display: block;
-  max-width: 100%;
-  margin: 0 auto;
+display: block;
+max-width: 105%;
+margin: -30px -30px;
 }
 
 .post-footer {
@@ -685,8 +694,10 @@ table.plain tbody > tr:nth-child(odd) > th {
   }
 }
 
+
+
 @media (max-width: 1250px) {
-    .item {
+    .blog .item {
         width:93%;
     }
 }
@@ -809,3 +820,42 @@ table.plain tbody > tr:nth-child(odd) > th {
     margin: 1.4rem 0.8rem 0 0.8rem;
   }
 }
+
+
+.blog {
+background: #0D0F27;
+padding: 30px 0;
+}
+
+.container.i{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 14px;
+line-height: 1.428571429;
+color: #333;
+margin:30px 0;
+}
+
+.carousel-inner>.item {
+width: 100%;
+height: 720px;
+overflow: hidden;
+}
+
+.post-content h1 {
+    margin-top: 63px;
+}
+
+.holder {
+    background: #34495e;
+padding: 30px;
+margin: 28px 0;
+border-radius: 5px;
+}
+
+.ad-content {
+    margin: 80px 0;
+    color:#000;
+}
+    .ad-content h1 {
+        color:#000;
+    }
