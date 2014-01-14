@@ -1,8 +1,7 @@
 {{!< default}}
 <div class="row" style="background: #2c3e50;">
-  <div class="col-md-2"></div>
-  <div class="col-md-8">
-<div class="holder">
+  <div class="col-md-8 col-md-offset-2">
+	<div class="holder">
         {{#post}}
 
         <!--<span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>-->
@@ -11,17 +10,7 @@
             {{content}}
         </section>
 
-        <footer class="post-footer">
-
-            {{#if author}}
-                <section class="author">
-                    <h4>{{author.name}}</h4>
-                    <p>{{author.bio}}</p>
-                </section>
-            {{/if}}
-        </footer>
-
         {{/post}}
-</div>
-<div class="col-md-2"></div>
+		</div>
+	</div>
 </div>

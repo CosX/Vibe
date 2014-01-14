@@ -1,31 +1,6 @@
 @import url(normalize.css);
-@import url(http://fonts.googleapis.com/css?family=Muli);
-/*
-Some mixins I frequently use
-*/
-@font-face {
-  font-family: 'monb';
-  src: url("../fonts/montserrat-bold-webfont.eot");
-  src: url("../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-bold-webfont.woff") format("woff"), url("../fonts/montserrat-bold-webfont.ttf") format("truetype"), url("../fonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-@font-face {
-  font-family: 'monr';
-  src: url("../fonts/montserrat-regular-webfont.eot");
-  src: url("../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-regular-webfont.woff") format("woff"), url("../fonts/montserrat-regular-webfont.ttf") format("truetype"), url("../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Force SVG on webkit browsers (Chrome on Windows font fix) */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: 'monr';
-    src: url("../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
-}
-}
 /* Type styles for Pebble */
 html {
   font-size: 62.5%;
@@ -33,7 +8,7 @@ html {
 
 body {
   margin-top: 54px;
-  font-family: "Muli", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 3.2rem;
@@ -44,7 +19,6 @@ body {
 h1, h2, h3,
 h4, h5, h6 {
   text-rendering: optimizeLegibility;
-  font-family: "monr", sans-serif;
   color: #FFFFFF;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -89,14 +63,9 @@ h4 a, h5 a, h6 a {
   color: #eee;
 }
 
-b, strong {
-  font-family: "monb", sans-serif;
-}
-
 .blog .item { width: 30%; }
 
 .post-header.index .post-title {
-  font-family: "monr", sans-serif;
   font-size: 1.8rem;
   font-weight:. 400;
   text-transform: uppercase;
@@ -108,7 +77,6 @@ b, strong {
 }
 
 .post-meta {
-  font-family: "monr", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   text-transform: uppercase;
@@ -117,7 +85,6 @@ b, strong {
 }
 
 .blog-title, #blog-logo, .post-template .post-header a {
-font-family: "monb", sans-serif;
 font-size: 2rem;
 font-weight: 700;
 color: #FAFAFA;
@@ -129,7 +96,6 @@ text-decoration: none;
 }
 
 .blog-description {
-font-family: "monr", sans-serif;
 font-size: 1.4rem;
 font-weight: 400;
 line-height: 2rem;
@@ -148,7 +114,7 @@ blockquote {
 }
 
 .pagination {
-  font-family: "monr", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
   text-align: center;
@@ -162,7 +128,7 @@ blockquote {
 }
 
 .site-footer {
-  font-family: "Muli", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.7em;
@@ -427,10 +393,10 @@ hr {
 }
 
 .site-footer {
-  position: relative;
-  margin: 4rem 0 0 0;
-  padding: 4rem 0;
-  background: #1E2027;
+    position: relative;
+    margin: 0;
+    padding: 4rem 0;
+    background: #1E2027;
 }
 
 .subscribe {
