@@ -3,7 +3,7 @@ $(document).ready(function(){
     // initialize
     $("img").each(function(){
         var url = $(this).prop('src');
-        var spinner = "assets/img/spinner.gif"
+        var spinner = "../../img/spinner.gif"
         $(this).attr({"data-src": url, "src": spinner})
         });
 
