@@ -11,8 +11,12 @@ $(document).ready(function(){
 
     setTimeout(function(){
         $container.masonry({
-      columnWidth: 100,
-      itemSelector: '.item'
-    });
-        }, 10);
+			itemSelector : '.item',
+			isFitWidth: true,
+			transitionDuration: 0,
+			gutter: 10,
+			columnWidth : 442		
+        });
+        
+    }, 10);
 });

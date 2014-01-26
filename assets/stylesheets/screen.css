@@ -62,8 +62,58 @@ h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
   color: #eee;
 }
+/*NEW SHIT*/
+.blog .item { 
+    margin-bottom: 10px;
+    width: 440px;
 
-.blog .item { width: 30%; }
+}
+.box-link {
+    display: block;
+    text-decoration: none;
+    background:#34495e;
+    border-radius: 5px;
+}
+.box-link:hover {
+    text-decoration: none;
+    background:#2c3e50;
+    color: #f1f1f1;
+}
+
+.img-holder {
+display: block;
+position: relative;
+background-color: #fff;
+}
+
+.item img {
+    vertical-align: top;
+    width: 100%;
+}
+.item .text {
+    font-size: 13px;
+    line-height: 18px;
+    padding: 15px;
+}
+.item .post-title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #EFEFEF;
+    margin: 0 0 11px;
+    display: block;
+    padding: 0 20px;
+}
+.text span {
+    display: block;
+    padding: 0 20px 20px;
+}
+.hover-block {
+    display: none;
+    position: absolute;
+    height: 100%;
+    cursor: pointer;
+}
 
 .post-header.index .post-title {
   font-size: 1.8rem;
@@ -233,7 +283,7 @@ border-radius: 5px;
   margin: 0;
   line-height: 0;
 }
-.post .post-image img {
+/*.post .post-image img {
 width: 103.7%;
 -webkit-backface-visibility: hidden;
 -webkit-transition: 0.3s;
@@ -245,11 +295,11 @@ margin-top: -10px;
 }
 .post .post-image img:hover, .post .post-image img:active, .post .post-image img:focus {
   opacity: 0.8;
-}
-.post .post-title {
+}*/
+/*.post .post-title {
   margin-top: -0.2rem;
   margin-bottom: 2.6rem;
-}
+}*/
 
 #site-head {
   width: 100%;
@@ -295,9 +345,8 @@ margin-top: -10px;
 }
 
 .post-content img {
-display: block;
-max-width: 105%;
-margin: -30px -30px;
+    display: block;
+    width: 100%;
 }
 
 .post-footer {
@@ -662,6 +711,11 @@ table.plain tbody > tr:nth-child(odd) > th {
 }
 
 
+.gallery {
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+}
 
 @media (max-width: 1250px) {
     .blog .item {
@@ -826,3 +880,4 @@ border-radius: 5px;
     .ad-content h1 {
         color:#000;
     }
+

@@ -33,23 +33,18 @@
 <a id="blog" style="top:-40px">&nbsp;</a>
 <div class="blog">
 <h1 style="text-align:center; color:white;">Galleri</h1>
-	<div id="container" class="content">
+	<div id="container" class="content gallery">
 		{{! Each post will be output using this markup }}
 		{{#foreach posts}}
 	<div class="item">
-		<article class="{{post_class}}">
-			<div class="post-image">
-				<a href="{{url}}">
-					{{content words="0"}}
-				</a>
-			</div>
-			<header class="post-header index post-inner">
-				<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-			</header>
-			<section class="post-excerpt post-inner">
-				<p>{{excerpt characters="70"}}&hellip;</p>
-			</section>
-		</article>
+		<a class="box-link" href="{{url}}"> 
+			<span class="img-holder">{{content words="0"}}</span>
+			<span class="text">
+				<strong class="post-title">{{{title}}}</strong>
+				<span>{{excerpt characters="70"}}&hellip;</span>
+				<span class="hover-block"></span>
+			</span>
+		</a>
 	</div>
 		{{/foreach}}
 
