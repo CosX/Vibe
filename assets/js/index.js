@@ -7,16 +7,12 @@ $(document).ready(function(){
         $(this).attr({"data-src": url, "src": spinner})
         });
 
-    $("img").unveil();
-
-    setTimeout(function(){
+    $("img").unveil(200, function() {
         $container.masonry({
 			itemSelector : '.item',
 			isFitWidth: true,
-			transitionDuration: 0,
 			gutter: 10,
 			columnWidth : 442		
         });
-        
-    }, 10);
+    });
 });
