@@ -243,7 +243,7 @@ pre, blockquote {
 
 .inner {
 width: 100%;
-padding: 13% 0;
+padding: 20% 0;
 text-align:center;
 }
 .post-inner {
@@ -728,7 +728,7 @@ table.plain tbody > tr:nth-child(odd) > th {
         width:93%;
     }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 488px) {
   .container,
   .pagination, #site-head-content, .inner {
     width: auto;
@@ -846,6 +846,10 @@ table.plain tbody > tr:nth-child(odd) > th {
   .post-footer .share a {
     margin: 1.4rem 0.8rem 0 0.8rem;
   }
+
+  .blog .item {
+    width: 59%;
+    }
 }
 
 
@@ -887,3 +891,7 @@ border-radius: 5px;
         color:#000;
     }
 
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
