@@ -68,6 +68,11 @@ h4 a, h5 a, h6 a {
     width: 440px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.68);
 }
+.blog .item2 {
+    margin-bottom: 10px;
+    width: 892px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.68);
+}
 .box-link {
     display: block;
     text-decoration: none;
@@ -86,7 +91,7 @@ position: relative;
 background-color: #fff;
 }
 
-.item img {
+.item img, .item2 img {
     vertical-align: top;
     width: 100%;
     -webkit-border-top-left-radius: 5px;
@@ -96,12 +101,12 @@ background-color: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.item .text {
+.item .text, .item2 .text  {
     font-size: 13px;
     line-height: 18px;
     padding: 15px;
 }
-.item .post-title {
+.item .post-title, .item2 .post-title {
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
@@ -724,7 +729,7 @@ table.plain tbody > tr:nth-child(odd) > th {
 }
 
 @media (max-width: 1250px) {
-    .blog .item {
+    .blog .item, .blog .item2 {
         width:93%;
     }
 }
@@ -847,7 +852,7 @@ table.plain tbody > tr:nth-child(odd) > th {
     margin: 1.4rem 0.8rem 0 0.8rem;
   }
 
-  .blog .item {
+  .blog .item, .blog .item2 {
     width: 59%;
     }
 }
@@ -870,10 +875,6 @@ margin:30px 0;
 width: 100%;
 height: 720px;
 overflow: hidden;
-}
-
-.post-content h1 {
-    margin-top: 63px;
 }
 
 .holder {

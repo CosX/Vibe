@@ -9,14 +9,19 @@ $(document).ready(function(){
 
     var holdsettimeout;
     $("img").unveil(200, function() {
+        var that = this;
+        if ($(that).height() < 400){
+            $(that).parents(".item").removeClass("item").addClass("item2");
+        }
         clearTimeout(holdsettimeout);
         holdsettimeout = setTimeout(function () {
             $container.masonry({
-			    itemSelector : '.item',
+			    itemSelector : '.item, .item2',
 			    isFitWidth: true,
 			    gutter: 10,
 			    columnWidth : 442		
             });
+            
         }, 1000);
     });
 
