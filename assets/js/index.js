@@ -35,12 +35,10 @@ $(document).ready(function(){
                 $('.navbar').animate({
                 'margin-top': '-55px'
             }, 500);
-             console.log("down");
            } else {
                 $('.navbar').animate({
                 'margin-top': '0'
             }, 500);
-             console.log("up");
            }
            lastScrollTop = st;
        }, 500);
