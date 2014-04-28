@@ -16,20 +16,26 @@
 {{! The main content area on the homepage }}
 <a id="blog" style="margin-top: -40px; position: absolute;">&nbsp;</a>
 <div class="blog">
-<h1 style="text-align:center; color:white;">Galleri</h1>
+    <h1 style="text-align:center; color:white;">Galleri</h1>
+    <div class="flat">
+        <div class="button-flat-empty all active">Alle</div>
+        <div class="button-flat-empty Landskap">Landskap og stilleben</div>
+        <div class="button-flat-empty Portretter">Portretter og akt</div>
+        <div class="button-flat-empty Tegninger">Tegninger og skisser</div>
+    </div>
 	<div id="container" class="content gallery">
 		{{! Each post will be output using this markup }}
 		{{#foreach posts}}
-	<div class="item">
-		<a class="box-link" href="{{url}}"> 
-			<span class="img-holder">{{content words="0"}}</span>
-			<span class="text">
-				<strong class="post-title">{{{title}}}</strong>
-				<span>{{excerpt characters="70"}}&hellip;</span>
-				<span class="hover-block"></span>
-			</span>
-		</a>
-	</div>
+        <div class="item {{#foreach tags}}{{name}}{{/foreach}}">
+            <a class="box-link" href="{{url}}">
+                <span class="img-holder">{{content words="0"}}</span>
+                <span class="text">
+                    <strong class="post-title">{{{title}}}</strong>
+                    <span>{{excerpt characters="70"}}&hellip;</span>
+                    <span class="hover-block"></span>
+                </span>
+            </a>
+        </div>
 		{{/foreach}}
 
 	</div>

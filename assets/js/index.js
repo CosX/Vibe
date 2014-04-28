@@ -15,13 +15,7 @@ $(document).ready(function(){
         }
         clearTimeout(holdsettimeout);
         holdsettimeout = setTimeout(function () {
-            $container.masonry({
-			    itemSelector : '.item, .item2',
-			    isFitWidth: true,
-			    gutter: 10,
-			    columnWidth : 442		
-            });
-            
+            mason($container);
         }, 1000);
     });
 
@@ -46,6 +40,27 @@ $(document).ready(function(){
             }, 500);
            }
            lastScrollTop = st;
-       }, 500);
+       }, 100);
+    });
+
+    $(".button-flat-empty").click(function () {
+        var getClass = $(this).attr("class").replace("button-flat-empty", "").replace(" ", "");
+        $(".active").removeClass("active");
+        $(this).addClass("active");
+        $(".item, .item2").hide();
+        $("." + getClass + "").show();
+        if (getClass == "all") {
+            $(".item, .item2").show();
+        }
+        mason($container);
     });
 });
+
+var mason = function ($container) {
+    $container.masonry({
+        itemSelector: '.item, .item2',
+        isFitWidth: true,
+        gutter: 10,
+        columnWidth: 442
+    });
+}
