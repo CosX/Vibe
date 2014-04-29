@@ -44,8 +44,8 @@ $(document).ready(function(){
     });
 
     $(".button-flat-empty").click(function () {
-        var getClass = $(this).attr("class").replace("button-flat-empty", "").replace(" ", "");
         $(".active").removeClass("active");
+        var getClass = $(this).attr("class").replace("button-flat-empty", "").replace(" ", "");
         $(this).addClass("active");
         $(".item, .item2").hide();
         $("." + getClass + "").show();
