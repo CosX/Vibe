@@ -9,10 +9,6 @@ $(document).ready(function(){
 
     var holdsettimeout;
     $("img").unveil(200, function() {
-        var that = this;
-        if ($(that).height() < 400){
-            $(that).parents(".item").removeClass("item").addClass("item2");
-        }
         clearTimeout(holdsettimeout);
         holdsettimeout = setTimeout(function () {
             mason($container);
