@@ -1,10 +1,11 @@
 $(document).ready(function(){
     var $container = $('#container');
-    // initialize
+
+    //Image logic
     $("img").each(function(){
         var url = $(this).prop('src');
-        var spinner = "../../img/spinner.gif"
-        $(this).attr({"data-src": url, "src": spinner})
+        var spinner = "../../img/spinner.gif";
+        $(this).attr({ "data-src": url, "src": spinner });
     });
 
     var holdsettimeout;
@@ -15,7 +16,7 @@ $(document).ready(function(){
         }, 1000);
     });
 
-    var myval = 0;
+    //Remove masthead on scroll
     var lastScrollTop = 0, delta = 5;
     var holdsettimeout2;
     $(window).scroll(function(event){
@@ -39,18 +40,31 @@ $(document).ready(function(){
        }, 100);
     });
 
+    //Set active onclick 
     $(".button-flat-empty").click(function () {
-        $(".active").removeClass("active");
         var getClass = $(this).attr("class").replace("button-flat-empty", "").replace(" ", "");
-        $(this).addClass("active");
-        $(".item, .item2").hide();
-        $("." + getClass + "").show();
-        if (getClass == "all") {
-            $(".item, .item2").show();
-        }
-        mason($container);
+        setActive($container, getClass);
+        $.cookie("category", getClass);
     });
+
+    //Set active onload
+    if (($.cookie("category") !== null) || $.cookie("category") !== "null") {
+        setActive($container, $.cookie("category"));
+    } else {
+        setActive($container, "all");
+    }
 });
+
+var setActive = function($container, getClass) {
+    $(".active").removeClass("active");
+    $("." + getClass + "").addClass("active");
+    $(".item, .item2").hide();
+    $("." + getClass + "").show();
+    if (getClass == "all") {
+        $(".item, .item2").show();
+    }
+    mason($container);
+};
 
 var mason = function ($container) {
     $container.masonry({
