@@ -48,7 +48,7 @@ $(document).ready(function(){
     });
 
     //Set active onload
-    if (($.cookie("category") !== null) || $.cookie("category") !== "null") {
+    if (($.cookie("category") !== null) && $.cookie("category") !== "null") {
         setActive($container, $.cookie("category"));
     } else {
         setActive($container, "all");
