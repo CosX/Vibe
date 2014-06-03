@@ -64,13 +64,46 @@ var setActive = function($container, getClass) {
         $(".item, .item2").show();
     }
     mason($container);
+    generateSubmenu(getClass);
 };
 
-var mason = function ($container) {
+var mason = function($container) {
     $container.masonry({
         itemSelector: '.item, .item2',
         isFitWidth: true,
         gutter: 10,
         columnWidth: 442
     });
+};
+
+var generateSubmenu = function(getClass) {
+    
+    var menus = {
+        "Tegninger": [
+            "Kull og kritt",
+            "Pastellkritt",
+            "Blyant",
+            "Tusj",
+            "Akryl",
+            "Akvarell"
+        ],
+        "Landskap": [
+            "Kun landskap",
+            "Stilleben"
+        ],
+        "Portretter": [
+            "Portrett",
+            "Akt"
+        ]
+    };
+
+    var items = [];
+    $.each(menus, function (key, val) {
+        if (getClass === key.toString()) {
+            $.each(val, function(k, v) {
+                items.push("<div class='button-flat-empty " + v + "'>" + v + "</div>");
+            });
+        }
+    });
+    $(".submenus").html(items);
 }
