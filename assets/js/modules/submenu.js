@@ -21,8 +21,12 @@
     //Little off...
     var setActive = function (getClass) {
         var $getClass = $("." + getClass);
-
-        $(".active").removeClass("active");
+        if (getClass.split("-")[0] === "Under") {
+            $(".submenus .active").removeClass("active");
+        } else {
+            $(".active").removeClass("active");
+        }
+        
         $getClass.addClass("active");
         $(".item, .item2").hide();
         $getClass.show();
