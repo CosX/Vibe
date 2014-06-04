@@ -17,9 +17,10 @@ define(['jquery', 'modules/images', 'modules/masthead', 'modules/submenu'], func
         masthead.hideOnDownScroll();
 
         submenu.setActiveOnLoad();
-        $(".button-flat-empty").click(function(){
+        $(".flat").on("click", ".button-flat-empty", function () {
             submenu.setActiveAndCookie(this);
         });
+       
     });
     
 });

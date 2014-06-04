@@ -1,7 +1,7 @@
 ﻿define(['jquery', 'modules/masonit', 'lib/jquery.cookie'], function ($, masonry) {
     var menus = {
         "Tegninger": [
-            "Kull og kritt",
+            "Kull",
             "Pastellkritt",
             "Blyant",
             "Tusj",
@@ -9,7 +9,7 @@
             "Akvarell"
         ],
         "Landskap": [
-            "Kun landskap",
+            "Landskap",
             "Stilleben"
         ],
         "Portretter": [
@@ -19,10 +19,12 @@
     };
 
     var setActive = function (getClass) {
+        var $getClass = $("." + getClass);
+
         $(".active").removeClass("active");
-        $("." + getClass + "").addClass("active");
+        $getClass.addClass("active");
         $(".item, .item2").hide();
-        $("." + getClass + "").show();
+        $getClass.show();
         if (getClass == "all") {
             $(".item, .item2").show();
         }
@@ -34,9 +36,24 @@
 
         var items = [];
         $.each(menus, function(key, val) {
-            if (getClass === key.toString()) {
+            if (getClass.split("-")[1] === key) {
                 $.each(val, function(k, v) {
-                    items.push("<div class='button-flat-empty " + v + "'>" + v + "</div>");
+                    items.push("<div class='button-flat-empty Under-" + v + "'>" + v + "</div>");
+                });
+            } else {
+                $.each(val, function(k, v) {
+                    if (getClass.split("-")[1] === v) {
+                        $("." + key).addClass("active");
+                        
+                        $.each(val, function (kt, va) {
+                            if (va === v) {
+                                items.push("<div class='button-flat-empty active Under-" + va + "'>" + va + "</div>");
+                            } else {
+                                items.push("<div class='button-flat-empty Under-" + va + "'>" + va + "</div>");
+                            }
+                            
+                        });
+                    }
                 });
             }
         });
