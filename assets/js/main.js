@@ -1,7 +1,8 @@
 ﻿require.config({
     "baseUrl": "/assets/js/",
     "paths": {
-        "jquery": "lib/jquery"
+        "jquery": "lib/jquery",
+        "bootstrap":"lib/bootstrap"
     },
     "shim": {
         "lib/jquery.cookie": ["jquery"],
@@ -9,7 +10,7 @@
     }
 });
 
-define(['jquery', 'modules/images', 'modules/masthead', 'modules/submenu'], function ($, images, masthead, submenu) {
+define(['jquery', 'modules/images', 'modules/masthead', 'modules/submenu', 'bootstrap'], function ($, images, masthead, submenu) {
     $(document).ready(function() {
         images.makeImgSpinner();
         images.showImages();
