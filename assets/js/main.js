@@ -6,7 +6,8 @@
     },
     "shim": {
         "lib/jquery.cookie": ["jquery"],
-        "lib/unveil": ["jquery"]
+        "lib/unveil": ["jquery"],
+        "bootstrap": ["jquery"]
     }
 });
 
