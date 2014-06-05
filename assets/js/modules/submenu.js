@@ -72,7 +72,7 @@
     };
 
     var setActiveOnLoad = function () {
-        if (($.cookie("category") !== null) && $.cookie("category") !== "null") {
+        if (($.cookie("category") !== null) && $.cookie("category") !== "null" && $.cookie("category") !== undefined) {
             setActive($.cookie("category"));
         } else {
             setActive("all");
