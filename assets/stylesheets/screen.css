@@ -962,6 +962,7 @@ border-radius: 5px;
         -webkit-transition-duration: 0.2s;
         transition-duration: 0.2s;
         background: none;
+        border:0;
         border-bottom: 1px solid #fff;
     }
 
