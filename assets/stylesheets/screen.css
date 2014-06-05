@@ -756,6 +756,10 @@ table.plain tbody > tr:nth-child(odd) > th {
   h4 {
     font-size: 2.3rem;
   }
+
+  #container {
+        width: 100%!important;
+    }
 }
 
 
@@ -889,9 +893,6 @@ table.plain tbody > tr:nth-child(odd) > th {
     margin: 1.4rem 0.8rem 0 0.8rem;
   }
 
-  .blog .item, .blog .item2 {
-    width: 59%;
-    }
 }
 
 
@@ -965,5 +966,5 @@ border-radius: 5px;
         border:0;
         border-bottom: 1px solid #fff;
     }
-
+    
 }
