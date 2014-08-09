@@ -2,11 +2,16 @@
     "baseUrl": "/assets/js/",
     "paths": {
         "jquery": "lib/jquery",
+        "underscore":"lib/underscore",
         "bootstrap":"lib/bootstrap"
     },
     "shim": {
+        'underscore': {
+            exports: '_'
+        },
         "lib/jquery.cookie": ["jquery"],
         "lib/unveil": ["jquery"],
+        "lib/jFeed":["jquery"],
         "bootstrap": ["jquery"]
     }
 });

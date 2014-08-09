@@ -1,4 +1,4 @@
-﻿define(['jquery', 'modules/masonit', 'lib/jquery.cookie'], function ($, masonry) {
+﻿define(['jquery', 'modules/masonit', 'modules/getRSSFeed', 'lib/jquery.cookie'], function ($, masonry, rss) {
     var menus = {
         "Tegninger": [
             "Kull",
@@ -30,10 +30,8 @@
         $getClass.addClass("active");
         $(".item, .item2").hide();
         $getClass.show();
-        if (getClass == "all") {
-            $(".item, .item2").show();
-        }
-        masonry.turnUp();
+
+        rss.rendercategory(getClass);
         generateSubmenu(getClass);
     };
 
@@ -75,7 +73,8 @@
         if (($.cookie("category") !== null) && $.cookie("category") !== "null" && $.cookie("category") !== undefined) {
             setActive($.cookie("category"));
         } else {
-            setActive("all");
+            $.cookie("category", "Hoved-Landskap");
+            setActiveOnLoad();
         }
     };
 

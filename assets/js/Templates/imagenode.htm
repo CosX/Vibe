@@ -1,0 +1,12 @@
+﻿<% _.each(items, function(item){ %>
+    <div class="item">
+        <a class="box-link" href="<%= item.url %>">
+            <span class="img-holder"><%= item.img %></span>
+            <span class="text">
+                <strong class="post-title"><%= item.title %></strong>
+                <span><%= item.exerpt %></span>
+                <span class="hover-block"></span>
+            </span>
+        </a>
+    </div>
+<% }); %>

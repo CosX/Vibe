@@ -1,0 +1,15 @@
+{{!< default}}
+
+{{! Each post will be output using this markup }}
+		{{#foreach posts}}
+<div class="item {{#foreach tags}}{{name}} {{/foreach}}">
+    <a class="box-link" href="{{url}}">
+        <span class="img-holder">{{content words="0"}}</span>
+        <span class="text">
+            <strong class="post-title">{{{title}}}</strong>
+            <span>{{excerpt characters="70"}}&hellip;</span>
+            <span class="hover-block"></span>
+        </span>
+    </a>
+</div>
+		{{/foreach}}
